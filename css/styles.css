@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Bebas";
+  src: url(../font/BebasNeue-Regular.ttf);
+}
+@font-face {
+  font-family: "Champions";
+  src: url(../font/champion-htf-featherweight.otf);
+}
+@font-face {
+  font-family: "Knockout";
+  src: url(../font/Knockout\ HTF49Liteweight\ Regular.otf);
+}
+.producto__btn {
+  border: 0;
+  font-family: "Bebas";
+  font-size: 15px;
+  background-color: transparent;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.producto__btn:hover {
+  border: 1px solid black;
+}
+
+.logo-marca {
+  font-family: "Bebas";
+  font-size: 40px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  padding-left: 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 4px black solid;
+}
+header a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+header ul {
+  font-size: 18px;
+  font-family: "Bebas";
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.portada-texto {
+  background-image: url(../img/3132-h0.jpg);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: "Bebas";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.portada-texto h1 {
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+
+.productos-texto {
+  padding: 2rem;
+  font-family: "Knockout";
+  font-size: 17px;
+  text-align: center;
+}
+
+.container-productos {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  display: grid;
+  grid-gap: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.producto {
+  width: 250px;
+  height: 370px;
+  padding: 20px;
+  text-align: center;
+  font-family: "Bebas";
+}
+.producto__descripcion {
+  padding-bottom: 10px;
+}
+.producto__price {
+  font-weight: bold;
+}
+
+.producto__img {
+  width: 200px;
+  height: 220px;
+}
+
+@media (min-width: 580px) {
+  .container-productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1000px) {
+  .container-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+footer {
+  width: 100%;
+  text-align: center;
+  font-family: "Bebas";
+  color: white;
+  background-color: black;
+}
+
+.contenedor__carrito {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.carrito__vacio,
+.carrito__comprado {
+  font-family: "Knockout";
+  font-size: 25px;
+  padding: 1rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.carrito__productos {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.titulop-carrito {
+  font-family: "Bebas";
+  text-align: center;
+  padding-top: 20px;
+}
+
+.carrito__producto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  padding-right: 1.5rem;
+  font-family: "Bebas";
+}
+.carrito__producto__titulo {
+  width: 200px;
+}
+
+.carrito__producto__img {
+  width: 2rem;
+}
+
+.carrito__producto__eliminar {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.carrito__acciones {
+  display: flex;
+  justify-content: space-between;
+}
+
+.vaciar {
+  border: 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  font-family: "Bebas";
+  cursor: pointer;
+}
+
+.carrito__acciones__derecha {
+  display: flex;
+}
+
+.carrito__acciones__total {
+  display: flex;
+  border: 0;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-family: "Bebas";
+}
+
+.carrito__acciones__comprar {
+  border: 0;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-family: "Bebas";
+  cursor: pointer;
+}
+
+.disabled {
+  display: none;
+}
+
+/*# sourceMappingURL=styles.css.map */

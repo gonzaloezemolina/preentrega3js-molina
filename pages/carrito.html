@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Store</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../img/69966.ico">
+</head>
+
+<body>
+    <!-- encabezado -->
+    <header>
+        <div class="logo-marca">
+            <p>FITNESS STORE</p>
+        </div>
+        <div>
+            <!-- <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button> -->
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html">Productos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li>
+                        <a href="./carrito.html">Ir al carrito </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+
+    <!-- Contenido principal -->
+    
+
+        <!-- titulo principal -->
+        <main>
+        <h1 class="titulop-carrito">Carrito</h1>
+        <!-- contenedor del carrito -->
+        <div class="contenedor__carrito">
+            <p id="carrito__vacio" class="carrito__vacio">Tu carrito esta vacio <i class="bi bi-emoji-frown"></i></p>
+
+
+            <div id="carrito__productos" class="carrito__productos disabled">
+
+                <!-- <div class="carrito__producto">
+                    <img class="carrito__producto__img" src="../img/SPX400X500ssss.webp" alt="">
+                    <div class="carrito__producto__titulo">
+                        <small>Nombre</small>
+                        <h3>Proteina SPX</h3>
+                    </div>
+                <div class="carrito__producto__cantidad">
+                    <small>Cantidad</small>
+                    <p>1</p>
+                </div>
+            <div class="carrito__producto__precio">
+            <small>Precio</small>
+            <p>$4899</p>
+        </div>
+        <div class="carrito__producto__subtotal">
+            <small>Subtotal</small>
+            <p>$4899</p>
+        </div>
+        <button class="carrito__producto__eliminar"><i class="bi bi-trash"></i></button>
+    </div>
+    </div> -->
+
+
+
+
+        <div id="carrito__acciones" class="carrito__acciones disabled">
+<!-- Parte izquierda -->
+            <div class="carrito__acciones__left">
+                <button class="vaciar">Vaciar carrito</button>
+            </div>
+            
+<!-- Parte derecha -->
+                <div class="carrito__acciones__right">
+                    <div class="carrito__acciones__total">
+                        <p>Total:</p>
+                        <p>$11200</p>
+                    </div>
+                <button class="carrito__acciones__comprar">Comprar</button>
+            </div>
+        </div>
+
+        <p id="carrito__comprado" class="carrito__comprado disabled">Muchas gracias por su compra!</p>
+    </main>
+
+    <!-- Inicio del footer -->
+    <footer>
+        <small>Made with ♥ by Gonzalo Molina</small>
+    </footer>
+
+
+    <!-- scripts -->
+    <script src="../carrito.js"></script>
+    <script src="../index.js"></script>
+</body>
+
+</html>
