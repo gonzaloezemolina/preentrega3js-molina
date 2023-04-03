@@ -94,7 +94,6 @@ const productos = [
 ]
 
 
-
 //Dom
 const contenedorProductos = document.querySelector("#contenedor-productos")
 let productoBotones = document.querySelectorAll(".producto__btn")
@@ -148,7 +147,7 @@ if(carrito.some(producto => producto.id === idBtn)){
 carrito.push(productoAdd);
 }
 
-//Funcion para actualizar la cant.del carrito
+//Funcion para actualizar el contador del carrito
 function cantidadCarrito () {
     let contador = carrito.reduce((acc, producto) => acc + producto.cantidad, 0)
     contadorCarrito.innerText = contador;
@@ -164,6 +163,4 @@ localStorage.setItem("productos-en-carrito" , JSON.stringify(carrito))
 
 // Carrito array
 const carrito = [];
-
-
 
