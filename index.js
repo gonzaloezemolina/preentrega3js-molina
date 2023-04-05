@@ -101,8 +101,7 @@ const carritoContainer = document.querySelector("#carrito-contenedor");
 const contadorCarrito = document.querySelector("#contador__carrito")
 const vaciarCarrito = document.querySelector("#vaciar-carrito")
 const precioTotal = document.querySelector('#precioTotal')
-const eliminarProducto = document.querySelectorAll(".boton-eliminar")
-
+let eliminarProducto = document.querySelectorAll(".boton-eliminar")
 
 
 
@@ -150,7 +149,7 @@ function btnProduct() {
 // Carrito array
 const carrito = [];
 
-// Funcion agregar al carrito array + cantidad + contador
+// Funcion agregar al carrito array + cantidad
 function añadirAlCarrito(e) {
     const idBtn = e.currentTarget.id;
     const productoAdd = productos.find(producto => producto.id === idBtn);
@@ -159,6 +158,7 @@ function añadirAlCarrito(e) {
         carrito[index].cantidad++;
     } else {
         productoAdd.cantidad = 1;
+       
         carrito.push(productoAdd);
         cargarCarrito();
         console.log(carrito);
@@ -203,6 +203,7 @@ const cargarCarrito = () => {
     })
 
     precioTotal.innerText = carrito.reduce((acc, producto) => acc + producto.cantidad * producto.precio, 0)
+    cargarBotonesEliminar();
 }
 
 
@@ -218,12 +219,31 @@ vaciarCarrito.addEventListener('click', () => {
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('carrito')) {
-        carrito = JSON.parse(localStorage.getItem('carrito'))
+//Eliminar producto
+
+function cargarBotonesEliminar() {
+    eliminarProducto = document.querySelectorAll(".boton-eliminar")
+
+    eliminarProducto.forEach(boton => {
+        boton.addEventListener("click", eliminarDelCarrito);
+    });
+}
+
+function eliminarDelCarrito(e) {
+    const idBoton = e.currentTarget.id;
+    const productoEliminado = carrito.find(producto => producto.id === idBoton)
+    const index = carrito.findIndex(producto => producto.id === idBoton);
+    carrito.splice(index, 1);
+    cargarCarrito();
+    localStorage.setItem("productos-en-carrito", JSON.stringify(carrito));
+}
+
+
+window.addEventListener('load', function () {
+    if (carrito.length > 0) {
         cargarCarrito();
     }
-})
+});
 
 
 
